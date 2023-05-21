@@ -7,7 +7,9 @@ import os
 #from flask_script import Manager
 #from flask_migrate import Migrate, MigrateCommand
 
-app = Flask(__name__)
+app = Flask(__name__,
+            static_url_path='',
+            static_folder='front/build')
 # configure the SQLite database, relative to the app instance folder
 if os.getenv('DATABASE_URL'):
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL').replace("postgres://", "postgresql://", 1)
