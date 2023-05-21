@@ -149,7 +149,7 @@ def signin():
 @app.route('/getProjects', methods=['GET'])
 @jwt_required()
 def getProjects():
-    Projects = Project.query.join(Project.db_Project_ProjectMember, aliased=True).filter_by(mem_id=get_jwt_identity()).all()
+    Projects = Project.query.join(Project.db_Project_ProjectMember).filter_by(mem_id=get_jwt_identity()).all()
     return jsonify([*map(project_serializer,Projects)])
 
 #取得指定行程
