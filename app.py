@@ -5,10 +5,13 @@ from flask import jsonify
 from serializer import *
 
 
+@app.route("/dd")
+def create_all():
+    db.create_all()
+    return "create_all"
 
 @app.route("/")
 def hello():
-    #db.create_all()
     return "Hello, World!"
 
 @app.route('/getMember', methods=['GET'])
