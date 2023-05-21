@@ -4,8 +4,8 @@ from serializer import *
 from datetime import datetime
 import os
 
-from flask_script import Manager
-from flask_migrate import Migrate, MigrateCommand
+#from flask_script import Manager
+#from flask_migrate import Migrate, MigrateCommand
 
 app = Flask(__name__)
 # configure the SQLite database, relative to the app instance folder
