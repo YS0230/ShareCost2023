@@ -43,6 +43,11 @@ def index():
 #@jwt_required()
 #def index():
 #    return {'start': time.time()}
+@app.route('/getMember123', methods=['GET'])
+def getMember123():
+    expected="查無使用者"
+    memberItem=Member.query.all()
+    return jsonify([*map(member_serializer,memberItem)])
 
 
 
