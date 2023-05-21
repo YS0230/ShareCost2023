@@ -120,5 +120,5 @@ class Status(db.Model): #確認狀態代碼表
     def __repr__(self):
         return 'Status Add '+str(self.sta_type)+','+str(self.sta_id)+','+str(self.sta_name)
 
-if __name__ == '__main__':
-    manager.run()
+#if __name__ == '__main__':
+    #manager.run()
