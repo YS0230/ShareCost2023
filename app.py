@@ -25,7 +25,7 @@ jwt = JWTManager(app)
 @app.route("/testdd")
 def create_all():
     db.create_all()
-    return "create_all"
+    return "create_all1"
 
 @app.route('/time')
 def get_current_time():
