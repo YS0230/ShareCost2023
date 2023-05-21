@@ -10,9 +10,10 @@ from serializer import *
 #    db.create_all()
 #    return "create_all"
 
-@app.route("/")
-def hello():
-    return "Hello, World!"
+
+@app.route('/')
+def index():
+   return app.send_static_file('index.html')
 
 @app.route('/getMember', methods=['GET'])
 def getMember():
