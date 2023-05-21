@@ -10,7 +10,7 @@ from flask_migrate import Migrate, MigrateCommand
 app = Flask(__name__)
 # configure the SQLite database, relative to the app instance folder
 if os.getenv('DATABASE_URL'):
-    SQLALCHEMY_DATABASE_URI = "sqlite:///project.db" #os.getenv('DATABASE_URL').replace("postgres://", "postgresql://", 1)
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL').replace("postgres://", "postgresql://", 1)
 else:
     SQLALCHEMY_DATABASE_URI = "sqlite:///project.db"
 
