@@ -22,6 +22,11 @@ app.config['JWT_REFRESH_TOKEN_EXPIRES'] = timedelta(seconds=3)
 
 jwt = JWTManager(app)
 
+with app.app_context():
+    print('初始化資料庫')
+    #db.drop_all()
+    db.create_all()
+
 @app.route("/testdd")
 def create_all():
     db.create_all()
