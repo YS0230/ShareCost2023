@@ -23,10 +23,11 @@ app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
 app.config["SECRET_KEY"] = SECRET_KEY
 
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
 
-manager = Manager(app)
-manager.add_command('db', MigrateCommand)
+#migrate = Migrate(app, db)
+
+#manager = Manager(app)
+#manager.add_command('db', MigrateCommand)
 
 
 class Member(db.Model): #會員資料表
