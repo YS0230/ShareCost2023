@@ -30,7 +30,7 @@ with app.app_context():
 @app.route("/testdd")
 def create_all():
     db.create_all()
-    return "create_all1"
+    return "create_all21"
 
 @app.route('/time')
 def get_current_time():
