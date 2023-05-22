@@ -11,10 +11,11 @@ app = Flask(__name__,
             static_url_path='',
             static_folder='front/build')
 # configure the SQLite database, relative to the app instance folder
-if os.getenv('DATABASE_URL'):
-    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL').replace("postgres://", "postgresql://", 1)
-else:
-    SQLALCHEMY_DATABASE_URI = "sqlite:///project.db"
+SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL').replace("postgres://", "postgresql://", 1)
+#if os.getenv('DATABASE_URL'):
+#    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL').replace("postgres://", "postgresql://", 1)
+#else:
+#    SQLALCHEMY_DATABASE_URI = "sqlite:///project.db"
 
 if os.getenv('SECRET_KEY'):
     SECRET_KEY = os.getenv('SECRET_KEY')
